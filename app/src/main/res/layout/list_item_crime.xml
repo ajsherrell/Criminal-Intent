@@ -4,6 +4,12 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
+    <CheckBox
+        android:id="@+id/police_check"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/requires_police" />
+
     <TextView android:id="@+id/crime_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

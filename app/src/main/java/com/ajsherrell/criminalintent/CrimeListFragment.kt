@@ -1,10 +1,12 @@
 package com.ajsherrell.criminalintent
 
+import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.CheckBox
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
@@ -55,6 +57,7 @@ class CrimeListFragment : Fragment() {
 
         private val titleTextView: TextView = itemView.findViewById(R.id.crime_title)
         private val dateTextView: TextView = itemView.findViewById(R.id.crime_date)
+        private var policeCheckBox: CheckBox = itemView.findViewById(R.id.police_check)
 
         init {
             itemView.setOnClickListener(this)
@@ -64,6 +67,16 @@ class CrimeListFragment : Fragment() {
             this.crime = crime
             titleTextView.text = this.crime.title
             dateTextView.text = this.crime.date.toString()
+            policeCheckBox.isChecked = this.crime.requiresPolice
+            policeCheckBox.setOnClickListener {
+                if (policeCheckBox.isChecked) {
+                    it.setBackgroundColor(Color.RED)
+                } else {
+                    it.setBackgroundColor(Color.WHITE)
+                }
+            }
+
+
         }
 
         override fun onClick(v: View?) {
