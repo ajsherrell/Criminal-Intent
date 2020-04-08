@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import java.util.*
 
 private const val TAG = "CrimeListFragment"
 
@@ -57,6 +58,7 @@ class CrimeListFragment : Fragment() {
         private val titleTextView: TextView = itemView.findViewById(R.id.crime_title)
         private val dateTextView: TextView = itemView.findViewById(R.id.crime_date)
         private val solvedImageView: ImageView = itemView.findViewById(R.id.crime_solved)
+        private val date: Date = Date()
 
         init {
             itemView.setOnClickListener(this)
@@ -65,7 +67,7 @@ class CrimeListFragment : Fragment() {
         fun bind(crime: Crime) {
             this.crime = crime
             titleTextView.text = this.crime.title
-            dateTextView.text = this.crime.date.toString()
+            dateTextView.text = this.crime.date.format(date)
             solvedImageView.visibility = if (crime.isSolved) {
                 View.VISIBLE
             } else {
