@@ -15,3 +15,4 @@
 - RecyclerView
 - LiveData
 - Lifecycle Observer
+- Accessibility
