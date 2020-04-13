@@ -218,8 +218,10 @@ class CrimeFragment : Fragment(), DatePickerFragment.Callbacks {
         if (photoFile.exists()) {
             val bitmap = getScaledBitmap(photoFile.path, requireActivity())
             photoView.setImageBitmap(bitmap)
+            photoView.contentDescription = getString(R.string.photo)
         } else {
             photoView.setImageDrawable(null)
+            photoView.contentDescription = getString(R.string.photo_no_photo)
         }
     }
 

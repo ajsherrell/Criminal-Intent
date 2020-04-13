@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="crime_title_hint">Enter a crime title here that represents the essence of said crime, so as to infer the severity.</string>
+</resources>

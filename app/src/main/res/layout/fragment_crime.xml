@@ -17,13 +17,14 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <ImageView android:id="@+id/crime_photo"
+            <ImageView
+                android:id="@+id/crime_photo"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:scaleType="centerInside"
-                android:contentDescription="@string/photo"
+                android:background="@android:color/darker_gray"
+                android:contentDescription="@string/photo_no_photo"
                 android:cropToPadding="true"
-                android:background="@android:color/darker_gray"/>
+                android:scaleType="centerInside" />
 
             <ImageButton android:id="@+id/crime_camera"
                 android:contentDescription="@string/take_a_picture"
