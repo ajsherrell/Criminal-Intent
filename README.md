@@ -19,6 +19,6 @@
 
 ### Images:
 
-![List Image](images/list.png)
+<img src="images/list.png" width="200">
 
-![Details Image](images/details.png)
+<img src="images/details.png" width="200">
