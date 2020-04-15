@@ -19,6 +19,6 @@
 
 ### Images:
 
-<img src="images/list.png" width="300">
+<img src="images/list.png" width="300">  <img src="images/details.png" width="300">
 
-<img src="images/details.png" width="300">
+
